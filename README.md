@@ -65,7 +65,7 @@ The *mmalsrc* is a source element. You can test it with gst-launch
 
 ```
 source scripts/env.sh
-gst-launch-1.0 mmalsrc width=640 height=360 \
+gst-launch-1.0 mmalsrc shutter-activation=on shutter-period=10000 exposure=on ISO=400 \
     ! videoconvert \
     ! fbdevsink
 ```
