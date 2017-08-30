@@ -1,5 +1,4 @@
 # Camera acquisition on Raspberry Pi, shutter, ISO and exposure controls and sink video/x-raw in GStreamer pipeline
-### [SMILE ECS - 2017](www.smile.fr)
 
 **GStreamer element : *gstmmalsrc***
 
@@ -66,7 +65,7 @@ The *mmalsrc* is a source element. You can test it with gst-launch
 ```
 source scripts/env.sh
 gst-launch-1.0 mmalsrc shutter-activation=on shutter-period=10000 exposure=on ISO=400 \
-    ! video/x-raw,format=RGBA,width=640,height=360,framerate=30/1
+    ! video/x-raw,format=RGBA,width=640,height=360,framerate=30/1 \
 	! videoconvert \
     ! fbdevsink
 ```
